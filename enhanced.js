@@ -128,7 +128,8 @@ class Game {
         if (this.winner) {
             Square.disable();
             this.declareWinner();
-        } else if (this.plays === 9 && !this.winner) { // check the current number of plays, since the game is set to complete when all squares have been played, we'll check for 9 plays
+        }
+        if (this.plays === 9 && !this.winner) { // check the current number of plays, since the game is set to complete when all squares have been played, we'll check for 9 plays
             this.notification = "Game Over"; // update the notification banner
             this.toggleNotification(); // refresh banner and reset btn
         }
