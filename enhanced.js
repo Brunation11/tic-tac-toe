@@ -48,7 +48,7 @@ class Board {
     }
 
     generate () {
-        var board = document.createElement("div"); // create new board element
+        let board = document.createElement("div"); // create new board element
         board.id = "board";
         document.body.append(board); // add the board to the dom
         this.populate(); // populate the game board
@@ -81,12 +81,12 @@ class Game {
     }
 
     updateBanner () {
-        var notification = document.getElementById("notification-banner"); 
+        let notification = document.getElementById("notification-banner"); 
         notification.innerHTML = this.notification; // update the banner message
     } 
 
     toggleResetButton () {
-        var resetBtn = document.getElementById("reset");
+        let resetBtn = document.getElementById("reset");
         resetBtn.onclick = () => {
             Square.reset(); // reset our square class
             this.board.reset(); // reset our board class
